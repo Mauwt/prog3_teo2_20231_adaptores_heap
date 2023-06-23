@@ -30,7 +30,7 @@ namespace utec {
             auto left_index = get_left_index(parent_index);
             if (has_right_child(parent_index)) {
                 auto right_index = get_right_index(parent_index);
-                return cnt[left_index] > cnt[right_index]?
+                return cnt[right_index] < cnt[left_index] ?
                     left_index:
                     right_index;
             }
